@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let diemvatly = parseInt(prompt("Nhập điểm Vật lí:"));
+        let diemhoahoc = parseInt(prompt("Nhập điểm hoá học:"));
+        let diemsinhhoc = parseInt(prompt("Nhập điểm Sinh học:"));
+
+        let diemtrungbinh = (diemvatly + diemhoahoc + diemsinhhoc) / 3;
+        let tongdiem = diemvatly + diemhoahoc + diemsinhhoc;
+        document.write('Điểm trung bình:' + diemtrungbinh);
+        document.write('<br/>');
+        document.write('Tổng điểm là:' + tongdiem);
+
+    </script>
+</body>
+
+</html>
