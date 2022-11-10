@@ -7,19 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<header>
+    <h2>điểm sinh viên</h2>
+</header>
 
 <body>
     <script>
-        let diemvatly = parseInt(prompt("Nhập điểm Vật lí:"));
-        let diemhoahoc = parseInt(prompt("Nhập điểm hoá học:"));
-        let diemsinhhoc = parseInt(prompt("Nhập điểm Sinh học:"));
+        let diemvatli = parseInt(prompt('nhập điểm vật lí')) ;
+        let diemhoahoc = parseInt(prompt('nhập điểm hoá học')) ;
+        let diemsinhhoc = parseInt(prompt('nhập điểm sinh học')); 
 
-        let diemtrungbinh = (diemvatly + diemhoahoc + diemsinhhoc) / 3;
-        let tongdiem = diemvatly + diemhoahoc + diemsinhhoc;
+        let diemtrungbinh = (diemhoahoc + diemsinhhoc + diemvatli)/3;
+        let tongdiem = diemhoahoc + diemsinhhoc + diemvatli;
+
         document.write('Điểm trung bình:' + diemtrungbinh);
         document.write('<br/>');
-        document.write('Tổng điểm là:' + tongdiem);
-
+        document.write('Tổng điểm:' + tongdiem);
     </script>
 </body>
 

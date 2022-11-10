@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            color: rgba(10, 143, 252, 0.708);
+        }
+        button{
+          background-color: rgba(10, 143, 252, 0.708);
+        }
+    </style>
+</head>    
+    <body>
+        <table style="text-align: right" width="600px">
+            <h1>Chuyển đổi tiền tệ</h1>
+            <tr>
+                <td> <b>Amount</b> </td>
+                <td> <b>From Currency</b></td>
+                <td> <b>To Curency</b> </td>
+                <td></td>
+    
+            </tr>
+            <tr>
+                <td><input type="text" id="input"></td>
+                <td><select name="viet nam" id="from">
+                        <option value="vnd">Việt Nam</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="usd" id="to">
+                        <option value="vnd">Việt Nam</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </td>
+                <td><button onclick="convert()">convert</button></td>
+    
+            </tr>
+            <tr>
+                <td>
+                    <h3 id="result">Result:</h3>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function convert() {
+                let money = +document.getElementById('input').value
+                let from = document.getElementById('from').value
+                let to = document.getElementById('to').value
+                if (from === to) {
+                    document.getElementById("result").innerHTML = money
+                }
+                else {
+                    if (from === "vnd") {
+                        document.getElementById("result").innerHTML = money / 23000
+                    }
+                    else {
+                        document.getElementById("result").innerHTML = money * 23000
+                    }
+                }
+
+            }
+        </script>
+    </body>
+    </html>
+</html>
